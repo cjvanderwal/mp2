@@ -1,1 +1,231 @@
-// Add any custom Sass & CSS here
+//DESKTOP NAVBAR
+.top-bar {
+  background-color: transparent;
+  font-family: 'Teko', sans-serif;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  &.need_background {
+    @include shift;
+    background-color: $dark-gray;
+    border-bottom: 3px solid $gold;
+    .top-bar-left a {
+      @include shift;
+      @include navbar-shrink;
+    }
+    .top-bar-right a{
+      @include shift;
+      @include navbar-shrink;
+    }
+  }
+  ul {
+    background-color: transparent;
+  }
+  li {
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  }
+
+  .top-bar-left {
+    a {
+      //display: inline-block;
+      @include navbar-styling;
+    }
+  }
+  .top-bar-right {
+    li {
+      //display: table-cell;
+      padding-right: 30px;
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    }
+    a {
+        @include navbar-styling;
+      &:hover, &.active {
+        @include navbar-active;
+      }
+    }
+  }
+}
+//MOBILE NAVBAR
+#nav-bar {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+}
+
+// INTRO, NAME AND VIDEO
+#intro {
+  display: table;
+  border-bottom: 3px solid $gold;
+  width: 100%;
+  height: 95%;
+  video#background-vid {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -100;
+   -ms-transform: translateX(-50%) translateY(-50%);
+   -moz-transform: translateX(-50%) translateY(-50%);
+   -webkit-transform: translateX(-50%) translateY(-50%);
+   transform: translateX(-50%) translateY(-50%);
+   background-size: cover;
+
+  }
+  i {
+    opacity: 0;
+    color: $gold;
+    font-size: 100px;
+    position: relative;
+    top: 75px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    @include fade_in;
+    @include delay;
+  }
+  .row {
+    display: table-cell;
+    vertical-align: middle;
+    #name {
+      padding-top: 100px;
+      font-family: 'Share', cursive;
+      color: white;
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+      font-size: 60px;
+      @include fade_in;
+    }
+    #school {
+      font-family: 'Teko', sans-serif;
+      opacity: 0;
+      position: relative;
+      top: -50px;
+      color: $gold;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      font-size: 30px;
+      @include fade_in;
+    }
+  }
+}
+
+// ICON MODALS
+#modal {
+  width: 100%;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  font-family: 'Share', cursive;
+  color: white;
+  background: $black;
+  border-bottom: 3px solid $gold;
+  display: table;
+  .inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .row {
+    margin-bottom: 50px;
+  }
+  img {
+    border: 3px solid $gold;
+  }
+  h2 {
+    font-family: 'Teko', sans-serif;
+    text-decoration: underline;
+  }
+  .reveal {
+    background: $black;
+    color: white;
+    border: 3px solid $gold;
+  }
+}
+
+// EXPERIENCE COLUMNS
+#column {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  font-family: 'Share', cursive;
+  font-size: 20px;
+  background-image: url("../data/pics/mountain-background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: $dark-gray;
+  border-bottom: 3px solid $gold;
+  color: white;
+  h1 {
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  }
+  h2 {
+    font-family: 'Teko', sans-serif;
+    text-decoration: underline;
+  }
+}
+
+// PICTURES CAROUSEL
+#carousel {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  font-family: 'Share', cursive;
+  font-size: 20px;
+  padding-bottom: 25px;
+  background-color: $black;
+  color: white;
+  #carousel-content {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  img {
+      display: inline-block;
+      border: 3px solid $gold;
+  }
+  h2 {
+    font-family: 'Teko', sans-serif;
+    text-decoration: underline;
+  }
+}
+
+#footer {
+  border-top: 3px solid $black;
+  background: $gold;
+
+  #footer-name {
+    font-size: 20px;
+    font-family: 'Share', cursive;
+  }
+
+  i {
+    margin-right: 15px;
+    color: $black;
+    font-size: 40px;
+  }
+
+  // icon animations
+  .fa-facebook-square {
+    color: black;
+    @include shift;
+    &:hover {
+      color: #3B5998;
+    }
+  }
+  .fa-twitter-square {
+    color: black;
+    @include shift;
+    &:hover {
+      color: #00aced;
+    }
+  }
+  .fa-linkedin-square {
+    color: black;
+    @include shift;
+    &:hover {
+      color: #0077b5;
+    }
+  }
+  .fa-github-square {
+    color: black;
+    @include shift;
+    &:hover {
+      color: gray;
+    }
+  }
+}

@@ -3,46 +3,266 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>MP2 Starter</title>
+  <title>Cameron Vander Wal MP2 (CS489)</title>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="./foundation6_lib/css/foundation.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="./foundation6_lib/css/foundation.css"> -->
   <link rel="stylesheet" href="./css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Teko' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Share' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
 </head>
 
 <body>
-  <nav class="top-bar">
+
+
+<!-- RESPONSIVE NAVBAR -->
+<section id="nav-bar">
+  <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium" data-topbar role="navigation">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title">Menu</div>
+  </div>
+  <div class="top-bar" id="main-menu">
     <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">MP2</li>
-        <li><a href="https://courses.engr.illinois.edu/cs498rk1/">Web Page</a></li>
+      <ul class="menu">
+        <li><a href="#intro>"<i class="fa fa-arrow-circle-o-up"></a></li>
       </ul>
     </div>
-  </nav>
+    <div class="top-bar-right">
+      <ul class="menu vertical medium-horizontal" data-reponsive-menu="drilldown medium-dropdown">
+        <li><a href="#modal">Personal</a></li>
+        <li><a href="#column">Professional</a></li>
+        <li><a href="#carousel">Experience</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- INTRO  -->
+<section id="intro">
+  <!-- intro video -->
+  <div class="fullscreen-bg">
+    <video loop muted autoplay class="fullscreen-bg-video" id="background-vid">
+      <source src="../data/videos/intro_movie.mp4" type="video/mp4">
+    </video>
+  </div>
+  <!-- name and uni -->
+  <div class="row align-middle">
+    <div class="columns text-center"><p id="name">Cameron Vander Wal</p><p id="school">University of Illinois at Urbana-Champaign</p></div>
+    <div class="columns text-center"><a href="#modal"><p class="text-center"><i class="fa fa-angle-down" id="bobble-button"></i></a></div>
+  </div>
+</section>
+
+
+<!-- MODAL -->
+<section id="modal">
+  <div class="inner">
+    <div class="row text-center">
+      <h2>Pictures</h2>
+    </div>
+    <div class="row">
+       <div class="column medium-3 text-center"><a data-open="modal1"><img src="../data/pics/pika.png"></a></div>
+       <div class="column medium-3 text-center"><a data-open="modal2"><img src="../data/pics/misty_midnight.jpg"></a></div>
+       <div class="column medium-3 text-center"><a data-open="modal3"><img src="../data/pics/turtle.png"></a></div>
+       <div class="column medium-3 text-center"><a data-open="modal4"><img src="../data/pics/adult_gorilla.png"></a></div>
+     </div>
+
+     <div class="row">
+        <div class="column medium-3 text-center"><a data-open="modal5"><img src="../data/pics/niagara.png"></a></div>
+        <div class="column medium-3 text-center"><a data-open="modal6"><img src="../data/pics/eiffel.png"></a></div>
+        <div class="column medium-3 text-center"><a data-open="modal7"><img src="../data/pics/daytona.png"></a></div>
+        <div class="column medium-3 text-center"><a data-open="modal8"><img src="../data/pics/space.png"></a></div>
+      </div>
+
+    <div class="reveal" id="modal1" data-reveal>
+      <div class="text-center">
+        <img src="../data/pics/pika.png">
+        <p>
+          This is my cat 'Pika'.  Pika is a 16 year old Maine Coon that my family got when I just was 5!
+          My aunt found him outside alone in her yard, and ever since then he has been a welcome addition to our family.
+        </p>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal" id="modal2" data-reveal>
+    <div class="text-center">
+      <img src="../data/pics/misty_midnight.jpg">
+      <p>
+        These are my other two cats 'Misty' (right) and 'Midnight' (left).  They are twins that we found when they were just
+        babies.  Their mom was a stray and they had no home, so of course we took them in!
+      </p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="reveal" id="modal3" data-reveal>
+    <div class="text-center">
+      <img src="../data/pics/turtle.png">
+      <p>
+        These are my other two cats 'Misty' (right) and 'Midnight' (left).  They are twins that we found when they were just
+        babies.  Their mom was a stray and they had no home, so of course we took them in!
+      </p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+    <div class="reveal" id="modal4" data-reveal>
+      <div class="text-center">
+        <img src="../data/pics/adult_gorilla.png">
+        <p>
+          This a gorilla at the Brookfield zoo.  I really enjoy the zoo and all the exotic animals that are in it, and Brookfield
+          Zoo is one of the best out there.
+        </p>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+
+  <div class="reveal" id="modal5" data-reveal>
+    <div class="text-center">
+      <img src="../data/pics/niagara.png">
+      <p>
+        This is from when I went to Niagara falls this past summer.  It's looking out over from the American side towards
+        the Canadian side, and the falls drops over 200 ft!
+      </p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="reveal" id="modal6" data-reveal>
+    <div class="text-center">
+      <img src="../data/pics/adult_gorilla.png">
+      <p>
+        France (and Paris in particular) is one of my favorite places to travel to.  I've been there 3 times now, and each time
+        is better than the last!
+      </p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="reveal" id="modal7" data-reveal>
+    <div class="text-center">
+      <img src="../data/pics/daytona.png">
+      <p>
+        This is the view overlooking my home in Daytona Beach, FL.  We live on the
+      </p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="reveal" id="modal8" data-reveal>
+    <div class="text-center">
+      <img src="../data/pics/space.png">
+      <p>
+        This is a rocket from the Kennedy Space Center, with the Saturn V in the background.  It's one of the coolest places
+        I've ever been, from the historical perspective all the way up to the active launch sites!
+      </p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+</section>
+
+<!-- COLUMNS -->
+<section id="column">
 	<div class="row text-center">
-		<h3>Hello. It's Me.</h3>
+		<h2>About me</h2>
 	</div>
-	<section class="row">
-		<div class="alert columns small-12 large-6">
-			<div class="text-center"><img src="http://lorempixel.com/400/200/cats"/></div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit velit temporibus, fugit recusandae aliquid officiis molestias possimus reprehenderit quos. Facere dolores, nulla optio recusandae. Voluptatibus aut esse nulla saepe sit ut amet, neque officia officiis quam ea ex adipisci, quaerat, eligendi veniam iste temporibus. Aperiam ea quos fugiat provident, voluptatum reiciendis mollitia voluptates, odio quam at, deserunt animi voluptas odit aliquid saepe voluptate distinctio excepturi. Deserunt, id esse fuga cum accusantium eos obcaecati odit veritatis molestias illum sequi repellat, quisquam quasi architecto velit blanditiis perferendis, nulla eligendi non laboriosam. Eligendi sint, voluptatem ipsam dolore eum temporibus dicta, quaerat ea molestias placeat, asperiores minima sit explicabo! Repellat qui ducimus ipsum. Dignissimos at, aliquid vitae asperiores omnis provident voluptatibus, itaque delectus. Porro corrupti vel culpa, delectus in doloremque nam ratione aliquid ullam non iusto magnam, repudiandae, magni a quasi voluptatum inventore exercitationem quibusdam sint autem totam ex quia possimus. Similique ad fugiat eligendi magnam ab, ex nulla unde eos, tempora quis consequatur maxime inventore perferendis voluptatem non nam dignissimos voluptatum dolor quasi quidem molestias maiores doloribus. Omnis ipsa fugit amet! Eum repellat deleniti fuga omnis in maiores rem iusto, qui quasi ipsum illum odit laudantium molestiae, nostrum ipsam fugit animi atque! Non.
-      </p>
+  <div class="row">
+    <div class="column medium-4">
+      <h1>student</h1>
+      I am a junior in Computer Science at the University of Illinois at Urbana-Champaign, and have taken
+      classes including C, C++, Java, Python, and even assembly.<br><br>
+      I am comfortable and enjoy both back-end, front-end, as well as full stack development.
     </div>
-		<div class="columns small-12 large-6">
-	  	<div class="text-center"><img src="http://lorempixel.com/400/200/nature"/></div>
-	  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt nobis facere sint placeat necessitatibus reprehenderit amet quas minima beatae illo nemo labore, maxime adipisci, accusamus voluptates repudiandae quia, ut excepturi ea quis obcaecati molestias error architecto unde? Hic vel facere porro magnam ipsam omnis eos ducimus, architecto velit beatae modi natus sunt suscipit quo optio qui repellat, blanditiis consequuntur. Fuga omnis porro quis inventore in voluptatum veritatis illum beatae rem. Labore nam saepe cupiditate quod, itaque quidem libero, quas tempore incidunt, quos earum repudiandae recusandae quia voluptas ducimus inventore, expedita. Alias minima, commodi aut, aspernatur laborum quae mollitia pariatur suscipit ad accusamus a ipsam fuga necessitatibus voluptas esse error reprehenderit provident. Sequi architecto ipsum qui enim labore sunt incidunt ullam pariatur. Minus porro error ipsa perferendis exercitationem debitis dicta asperiores nostrum cum voluptas qui dolores odit numquam incidunt cumque eos nemo architecto repudiandae adipisci, eius ut, aut suscipit minima perspiciatis consectetur. Ratione quisquam neque voluptatem? Qui, aspernatur iste quaerat iure. Debitis nobis minus animi mollitia libero temporibus perferendis ratione, inventore ullam, eos ut porro, velit quibusdam rerum possimus, ex! Quidem consectetur obcaecati ad veritatis. Velit illum aliquid tenetur, nisi illo quaerat labore nemo id sequi eveniet consequuntur. Voluptate, similique, rem!
-      </p>
+    <div class="column medium-4">
+      <h1>developer</h1>
+      I've been involved in many interesting projects so far, both solo and collaborative.  Just some of the
+      projects I've done include:<br><br>
+      <ul>
+        <li> Python BitTorrent client</li>
+        <li> Interactive Java chess and GUI</li>
+        <li> C and Linux kernel security suite</li>
+      </ul>
     </div>
-  </section>
+    <div class="column medium-4">
+      <h1>athlete</h1>
+      Outside of CS, I like to spend my time staying active.  I often golf, play basketball, as well as swim. <br><br>
+     Some of my favorite professional teams are the Chicago Blackhawks, Chicago Cubs, and Chicago Bulls, who are undesputibly the best
+     teams in their respective leagues.
+    </div>
+</section>
+
+<section id="carousel">
+  <div class="small-12 medium-8 small-centered columns">
+    <div class="row text-center">
+      <h2>Work Experience</h2>
+    </div>
+
+    <div class="text-center" id="carousel-content">
+      <div id="1">
+        <h1><img src="../data/pics/alcatel.jpg"></h1>
+        My sophomore year I interned as a Software Engineer at Alcatel-Lucent, a international telecoms company
+        based in France.  It was a great internship where I learned a lot about both low-level development as well as front end design.  I
+        programmed in C and Python, as well as Objective C and Java for mobile development.  I had so much fun there that I decided to accept
+        a return internship for next summer! Fun fact: The company has now been bought out by Nokia since I last worked there.
+      </div>
+
+      <div id="2">
+        <h1><img src="../data/pics/statefarm.png"></h1>
+        Currently I'm interning part-time as a software developer at State Farm here at the University's Research and Development Center.
+        I'm working on an automated metadata collection tool written with the .NET framework.  It crawls the State Farm databases and files in order to
+        find SPI (sensitive personal information), and records when, where, and what type of information it found.
+      </div>
+
+      <div id="3">
+        <h1><img src="../data/pics/hackillinois.jpg"></h1>
+        I also participate in HackIllinois, an annual hackathon here on campus.  This is my 3rd year with the organization, and have enjoyed
+        it more and more each time.  This past year was the biggest one for the organization yet, with over 1,500 students from accross the
+        country coming from schools like UC Berkeley, Purdue, and more!</div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="row text-center">
+    <a href="https://www.facebook.com/profile.php?id=100001035499531"><i class="fa fa-facebook-square"></i></a>
+    <a href="https://twitter.com/cjvanderwal33"><i class="fa fa-twitter-square"></i></a>
+    <a href="https://www.linkedin.com"><i class="fa fa-linkedin-square"></i></a>
+    <a href="https://github.com/cjvanderwal"><i class="fa fa-github-square"></i></a>
+  </div>
+  <div class="text-center" id="footer-name">Cameron Vander Wal</div>
+</footer>
+
 
   <!-- Scripts -->
-  
   <script src="./lib/jquery-2.1.3.min/index.js"></script>
   <script src="./foundation6_lib/js/foundation.min.js"></script>
   <script src="./js/script.js"></script>
   <script>
     $(document).foundation();
   </script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
