@@ -33,7 +33,7 @@ $(document).ready(function(){
         $(list[i]).removeClass('active');
       }
     }
-  if($(window).scrollTop() + $(window).height() == $(document).height()) {
+  if($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
     $('#bottom').addClass('active');
     $('#not-bottom').removeClass('active');
   }
