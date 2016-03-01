@@ -13,6 +13,7 @@
   <link href='https://fonts.googleapis.com/css?family=Share' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
+  <link rel="shortcut icon" type="image/ico" href="../data/pics/favicon.ico"/>
 </head>
 
 <body>
@@ -33,8 +34,8 @@
     <div class="top-bar-right">
       <ul class="menu vertical medium-horizontal" data-reponsive-menu="drilldown medium-dropdown">
         <li><a href="#modal">Personal</a></li>
-        <li><a href="#column">Professional</a></li>
-        <li><a href="#carousel">Experience</a></li>
+        <li><a href="#column" id="not-bottom">Professional</a></li>
+        <li><a href="#carousel" id="bottom">Experience</a></li>
       </ul>
     </div>
   </div>
@@ -108,8 +109,8 @@
     <div class="text-center">
       <img src="../data/pics/turtle.png">
       <p>
-        These are my other two cats 'Misty' (right) and 'Midnight' (left).  They are twins that we found when they were just
-        babies.  Their mom was a stray and they had no home, so of course we took them in!
+        This a turtle from Hawaii's black sand beach.  We came here while they were laying their eggs, and this particular turtle is almost
+        100 years old!
       </p>
       <button class="close-button" data-close aria-label="Close modal" type="button">
         <span aria-hidden="true">&times;</span>
@@ -160,7 +161,8 @@
     <div class="text-center">
       <img src="../data/pics/daytona.png">
       <p>
-        This is the view overlooking my home in Daytona Beach, FL.  We live on the
+        This is the view overlooking my home in Daytona Beach, FL.  We live on the 22nd floor and can see for miles around.
+        On clear mornings, it's even possible to see rocket launches from Cape Canaveral by NASA, SpaceX, and others!
       </p>
       <button class="close-button" data-close aria-label="Close modal" type="button">
         <span aria-hidden="true">&times;</span>
@@ -193,7 +195,7 @@
       <h1>student</h1>
       I am a junior in Computer Science at the University of Illinois at Urbana-Champaign, and have taken
       classes including C, C++, Java, Python, and even assembly.<br><br>
-      I am comfortable and enjoy both back-end, front-end, as well as full stack development.
+      I am comfortable and enjoy both back-end, front-end, as well as full stack development. Check out my <a href="../data/pdfs/resume.pdf">resume</a>.
     </div>
     <div class="column medium-4">
       <h1>developer</h1>
@@ -220,7 +222,7 @@
     </div>
 
     <div class="text-center" id="carousel-content">
-      <div id="1">
+      <div class="slide">
         <h1><img src="../data/pics/alcatel.jpg"></h1>
         My sophomore year I interned as a Software Engineer at Alcatel-Lucent, a international telecoms company
         based in France.  It was a great internship where I learned a lot about both low-level development as well as front end design.  I
@@ -228,14 +230,14 @@
         a return internship for next summer! Fun fact: The company has now been bought out by Nokia since I last worked there.
       </div>
 
-      <div id="2">
+      <div class="slide">
         <h1><img src="../data/pics/statefarm.png"></h1>
         Currently I'm interning part-time as a software developer at State Farm here at the University's Research and Development Center.
         I'm working on an automated metadata collection tool written with the .NET framework.  It crawls the State Farm databases and files in order to
         find SPI (sensitive personal information), and records when, where, and what type of information it found.
       </div>
 
-      <div id="3">
+      <div class="slide">
         <h1><img src="../data/pics/hackillinois.jpg"></h1>
         I also participate in HackIllinois, an annual hackathon here on campus.  This is my 3rd year with the organization, and have enjoyed
         it more and more each time.  This past year was the biggest one for the organization yet, with over 1,500 students from accross the

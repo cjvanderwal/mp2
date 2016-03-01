@@ -33,7 +33,11 @@ $(document).ready(function(){
         $(list[i]).removeClass('active');
       }
     }
-  });
+  if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    $('#bottom').addClass('active');
+    $('#not-bottom').removeClass('active');
+  }
+});
 
   //bobble the intro arrow up and down
   window.setInterval(bobble, 2000);
@@ -69,17 +73,14 @@ $(document).ready(function(){
   $(document).ready(function(){
     $('#carousel-content').eq($('.slick-active').index()).addClass('animated fadeInDown');
     $('#carousel-content').slick({
-      dots: false,
       infinite: true,
       speed: 700,
       fade: true,
-      cssEase: 'linear',
       swipeToSlide: true,
       responsive: [{
-      // breakpoint: 420,
-      // settings: "unslick" // destroys slick
-
-    }]
+        breakpoint: 420,
+        settings: "unslick"
+      }]
     });
   });
 

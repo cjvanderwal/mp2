@@ -55,3 +55,8 @@
   color: $dark-gray;
   text-shadow: none;
 }
+
+@mixin title-pos {
+  position: relative;
+  top: -60px;
+}

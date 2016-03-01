@@ -1,14 +1,14 @@
 //DESKTOP NAVBAR
 .top-bar {
   background-color: transparent;
-  font-family: 'Teko', sans-serif;
+  font-family: $font-title;
   position: fixed;
   width: 100%;
   z-index: 1;
   &.need_background {
     @include shift;
     background-color: $dark-gray;
-    border-bottom: 3px solid $gold;
+    border-bottom: $border-standard;
     .top-bar-left a {
       @include shift;
       @include navbar-shrink;
@@ -21,21 +21,15 @@
   ul {
     background-color: transparent;
   }
-  li {
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  }
-
   .top-bar-left {
     a {
-      //display: inline-block;
       @include navbar-styling;
     }
   }
   .top-bar-right {
     li {
-      //display: table-cell;
       padding-right: 30px;
-      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+      text-shadow: $font-outline;
     }
     a {
         @include navbar-styling;
@@ -55,7 +49,7 @@
 // INTRO, NAME AND VIDEO
 #intro {
   display: table;
-  border-bottom: 3px solid $gold;
+  border-bottom: $border-standard;
   width: 100%;
   height: 95%;
   video#background-vid {
@@ -77,10 +71,10 @@
   i {
     opacity: 0;
     color: $gold;
-    font-size: 100px;
+    font-size: $font-size-title;
     position: relative;
     top: 75px;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-shadow: $font-outline;
     @include fade_in;
     @include delay;
   }
@@ -89,34 +83,34 @@
     vertical-align: middle;
     #name {
       padding-top: 100px;
-      font-family: 'Share', cursive;
+      font-family: $font-paragraph;
       color: white;
-      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-      font-size: 60px;
+      text-shadow: $font-outline;
+      font-size: $font-size-nav;
       @include fade_in;
     }
     #school {
-      font-family: 'Teko', sans-serif;
+      font-family: $font-title;
       opacity: 0;
       position: relative;
       top: -50px;
       color: $gold;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      font-size: 30px;
+      text-shadow: $font-outline;
+      font-size: $font-size-intro;
       @include fade_in;
     }
   }
 }
 
-// ICON MODALS
+// PICTURE MODALS
 #modal {
   width: 100%;
   padding-top: 75px;
   padding-bottom: 75px;
-  font-family: 'Share', cursive;
+  font-family: $font-paragraph;
   color: white;
   background: $black;
-  border-bottom: 3px solid $gold;
+  border-bottom: $border-standard;
   display: table;
   .inner {
     display: table-cell;
@@ -126,99 +120,109 @@
   .row {
     margin-bottom: 50px;
   }
+  .column {
+    margin-bottom: 25px;
+  }
   img {
-    border: 3px solid $gold;
+    border: $border-standard;
   }
   h2 {
-    font-family: 'Teko', sans-serif;
+    @include title-pos;
+    font-family: $font-title;
     text-decoration: underline;
   }
   .reveal {
-    background: $black;
+    background: $dark-gray;
     color: white;
-    border: 3px solid $gold;
+    border: $border-standard;
   }
 }
 
-// EXPERIENCE COLUMNS
+// ABOUT ME COLUMNS
 #column {
   padding-top: 75px;
   padding-bottom: 75px;
-  font-family: 'Share', cursive;
-  font-size: 20px;
+  font-family: $font-paragraph;
+  font-size: $font-size-text;
   background-image: url("../data/pics/mountain-background.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-color: $dark-gray;
-  border-bottom: 3px solid $gold;
+  border-bottom: $border-standard;
   color: white;
+  .column {
+    margin-bottom: 25px;
+  }
   h1 {
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-family: $font-paragraph;
+    text-shadow: $font-outline;
   }
   h2 {
-    font-family: 'Teko', sans-serif;
+    @include title-pos;
+    font-family: $font-title;
     text-decoration: underline;
   }
 }
 
-// PICTURES CAROUSEL
+// WORK EXPERIENCE CAROUSEL
 #carousel {
   padding-top: 75px;
   padding-bottom: 75px;
-  font-family: 'Share', cursive;
-  font-size: 20px;
+  font-family: $font-paragraph;
+  font-size: $font-size-text;
   padding-bottom: 25px;
   background-color: $black;
   color: white;
+  .slide {
+    margin-bottom: 25px;
+  }
   #carousel-content {
     margin-left: 25px;
     margin-right: 25px;
   }
   img {
       display: inline-block;
-      border: 3px solid $gold;
+      border: $border-standard;
   }
   h2 {
-    font-family: 'Teko', sans-serif;
+    @include title-pos;
+    font-family: $font-title;
     text-decoration: underline;
   }
 }
 
+// SOCIAL MEDIA FOOTER
 #footer {
-  border-top: 3px solid $black;
+  border-top: $border-standard;
   background: $gold;
-
   #footer-name {
-    font-size: 20px;
-    font-family: 'Share', cursive;
+    font-size: $font-size-text;
+    font-family: $font-paragraph;
   }
-
   i {
     margin-right: 15px;
     color: $black;
-    font-size: 40px;
+    font-size: $font-size-icons;
   }
-
-  // icon animations
   .fa-facebook-square {
     color: black;
     @include shift;
     &:hover {
-      color: #3B5998;
+      color: $facebook;
     }
   }
   .fa-twitter-square {
     color: black;
     @include shift;
     &:hover {
-      color: #00aced;
+      color: $twitter;
     }
   }
   .fa-linkedin-square {
     color: black;
     @include shift;
     &:hover {
-      color: #0077b5;
+      color: $linkedin;
     }
   }
   .fa-github-square {
