@@ -26,7 +26,7 @@ $(document).ready(function(){
       var top = $(list[i].hash).offset().top;
       var bot = $(list[i].hash).offset().top + $(list[i].hash).height();
 
-      if (curr_height >= top && curr_height <= bot) {
+      if (curr_height+75 >= top && curr_height <= bot) {
         $(list[i]).addClass('active');
       }
       else {
